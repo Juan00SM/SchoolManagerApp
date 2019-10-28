@@ -26,10 +26,10 @@ public class Logo extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Logo.this, ListaContactos.class);
+                Intent intent = new Intent(Logo.this, ListaContactos.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
-        }, 1000);
+        }, 5000);
 
     }
 
