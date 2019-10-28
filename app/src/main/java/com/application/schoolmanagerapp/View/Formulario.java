@@ -1,7 +1,8 @@
-package com.application.schoolmanagerapp;
+package com.application.schoolmanagerapp.View;
 
 import android.os.Bundle;
 
+import com.application.schoolmanagerapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 

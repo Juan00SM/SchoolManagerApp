@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="listaopcionessexo">
+        <item>---Sexo---</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
+        <item>Otro...</item>
+    </string-array>
+</resources>
