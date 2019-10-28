@@ -8,11 +8,17 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.application.schoolmanagerapp.Model.Persona;
 import com.application.schoolmanagerapp.R;
+import com.application.schoolmanagerapp.View.AdaptadorPersona;
+import com.application.schoolmanagerapp.View.ListaContactos;
 
 public class HomeFragment extends Fragment {
 
@@ -23,13 +29,16 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.textcontador);
-        homeViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        RecyclerView recyclerView = root.findViewById(R.id.recyclerpersonas);
+
+        LinearLayoutManager layoutmanager = new LinearLayoutManager(ListaContactos.getContent());
+        TextView textcontador = (TextView) root.findViewById(R.id.textcontador);
+        textcontador.setText((Persona.personas.size()+" resultados encontrados"));
+
+        recyclerView.setLayoutManager(layoutmanager);
+
+        AdaptadorPersona adaptador = new AdaptadorPersona();
+        recyclerView.setAdapter(adaptador);
         return root;
     }
 }

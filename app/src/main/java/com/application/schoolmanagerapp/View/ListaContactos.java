@@ -1,11 +1,14 @@
 package com.application.schoolmanagerapp.View;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.application.schoolmanagerapp.Model.Persona;
 import com.application.schoolmanagerapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
@@ -20,14 +23,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
+import android.widget.TextView;
 
 public class ListaContactos extends AppCompatActivity {
 
     String TAG = "SchoolManagerApp/ListaContactos";
     private AppBarConfiguration mAppBarConfiguration;
-
+    static Context content;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +48,11 @@ public class ListaContactos extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        getSupportActionBar().closeOptionsMenu();
+
+
+        content = this;
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -54,6 +65,7 @@ public class ListaContactos extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override
@@ -61,6 +73,9 @@ public class ListaContactos extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.lista_contactos, menu);
         return true;
+    }
+    public static Context getContent(){
+        return content;
     }
 
     @Override

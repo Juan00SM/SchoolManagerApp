@@ -8,14 +8,14 @@
         android:id="@+id/textcontador"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="resultados"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerviewpersonas"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerpersonas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewpersonas"
+        android:id="@+id/recyclerpersonas"
         android:layout_width="match_parent"
         android:layout_height="565dp"
         android:scrollbars="vertical"
