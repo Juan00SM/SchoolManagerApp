@@ -4,21 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.application.schoolmanagerapp.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class Logo extends AppCompatActivity {
 
-    String TAG = "SchoolManager/Activity_Logo";
+    String TAG = "SchoolManagerApp/Logo";
 
 
     @Override
@@ -30,7 +26,7 @@ public class Logo extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Logo.this,Logo.class);
+                Intent intent = new Intent(Logo.this, ListaContactos.class);
                 startActivity(intent);
             }
         }, 1000);
