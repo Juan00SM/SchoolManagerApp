@@ -1,4 +1,4 @@
-package com.application.schoolmanagerapp.ui.send;
+package com.application.schoolmanagerapp.View.ui.send;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

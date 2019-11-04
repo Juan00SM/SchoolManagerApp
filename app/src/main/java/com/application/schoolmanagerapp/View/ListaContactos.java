@@ -4,11 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.application.schoolmanagerapp.Model.Persona;
+import com.application.schoolmanagerapp.Interfaces.ListadoInterface;
+import com.application.schoolmanagerapp.Presenter.MyPresenterListado;
 import com.application.schoolmanagerapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
@@ -23,17 +23,22 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
-import android.widget.TextView;
 
-public class ListaContactos extends AppCompatActivity {
+public class ListaContactos extends AppCompatActivity implements ListadoInterface.View {
 
     String TAG = "SchoolManagerApp/ListaContactos";
     private AppBarConfiguration mAppBarConfiguration;
     static Context content;
+    static Intent formulario;
+
+    public void lanzarFormulario(){
+        startActivity(formulario);
+    }
+    public static void setFormulario(Intent form){
+        formulario = form;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +49,8 @@ public class ListaContactos extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ListaContactos.this, Formulario.class);
-                startActivity(intent);
+                MyPresenterListado.getInstance().onClickAdd();
+                lanzarFormulario();
             }
         });
         getSupportActionBar().closeOptionsMenu();
