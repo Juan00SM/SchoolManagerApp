@@ -37,4 +37,5 @@
     <string name="errorFormularioEmail">El correo electronico es invalido</string>
     <string name="errorFormularioTelefono">El telefono es invalido</string>
     <string name="busquedaText">Busqueda</string>
+    <string name="SobreAppText">Sobre la App</string>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.SobreApp">
+    tools:context=".View.ListaContactos">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -12,30 +12,31 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarSobreApp"
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
             <ImageView
-                android:id="@+id/backSobreApp"
-                android:layout_width="30dp"
-                android:layout_height="28dp"
+                android:id="@+id/search"
+                android:layout_width="28dp"
+                android:layout_height="26dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/iconflecha" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="22sp"
-                android:textColor="#000"
-                android:layout_marginLeft="50dp"
-                android:text="@string/SobreAppText" />
-
+                android:layout_marginLeft="550dp"
+                android:src="@drawable/search"/>
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_sobre_app" />
+    <include layout="@layout/content_lista_contactos" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
