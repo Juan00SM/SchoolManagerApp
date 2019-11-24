@@ -2,6 +2,7 @@ package com.application.schoolmanagerapp.View;
 
 import android.os.Bundle;
 
+import com.application.schoolmanagerapp.Presenter.MyPresenterFormulario;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -10,12 +11,17 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.application.schoolmanagerapp.R;
 
 public class SobreApp extends AppCompatActivity {
 
     String TAG = "SchoolManagerApp/SobreApp";
+
+    public void terminarSobreApp(){
+        finish();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "Ejecutando onCreate...");
@@ -23,13 +29,11 @@ public class SobreApp extends AppCompatActivity {
         setContentView(R.layout.activity_sobre_app);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        ImageView backBoton = findViewById(R.id.backSobreApp);
+        backBoton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                terminarSobreApp();
             }
         });
     }
