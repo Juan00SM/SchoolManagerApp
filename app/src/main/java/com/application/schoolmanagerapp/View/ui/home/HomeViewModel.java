@@ -11,6 +11,7 @@ public class HomeViewModel extends ViewModel {
     public HomeViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("0 resultados encontrados");
+
     }
 
     public LiveData<String> getText() {

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/vistaScroll"
     android:layout_width="match_parent"
-    android:background="#E6E6E6"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".View.Formulario"
-    tools:showIn="@layout/activity_formulario">
+    tools:context=".View.Busqueda"
+    tools:showIn="@layout/activity_busqueda"
+    android:layout_marginTop="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,30 +15,7 @@
         android:orientation="vertical"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="18dp">
 
-            <ImageView
-                android:id="@+id/imagenFormulario"
-                android:src="@drawable/iconimagen"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:scaleType="centerInside"
-                android:layout_margin="16dp"
-                android:background="@drawable/border2">
-
-            </ImageView>
-            <Switch
-                android:id="@+id/botonSwitch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="38dp"
-                android:layout_marginLeft="10dp"
-                android:text="@string/textoSwitchProfesor" />
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,7 +39,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/nombre"
+                    android:id="@+id/nombreBusqueda"
                     android:textSize="20sp"
                     android:hint="@string/hintNombreFormulario"
                     android:textColor="#000"
@@ -73,7 +49,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
-                    android:id="@+id/apellidos"
+                    android:id="@+id/apellidosBusqueda"
                     android:textSize="20sp"
                     android:hint="@string/hintApellidoFormulario"
                     android:textColor="#000"
@@ -81,7 +57,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content" />
                 <TextView
-                    android:id="@+id/errorNombre"
+                    android:id="@+id/errorNombreBusqueda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="invisible"
@@ -112,25 +88,15 @@
                 android:background="@drawable/border3"
                 android:orientation="horizontal">
                 <Spinner
-                    android:id="@+id/sexoSpinner"
+                    android:id="@+id/sexoSpinnerBusqueda"
                     android:layout_height="25dp"
                     android:prompt="@string/promtsexo"
                     android:layout_width="165dp"
                     android:entries="@array/listaopcionessexo" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/botonAnadirOpcion"
-                android:layout_marginTop="22dp"
-                android:layout_marginLeft="16dp"
-                android:layout_width="40dp"
-                android:layout_height="35dp"
-                android:background="#00000000"
-                android:drawableTop="@drawable/add" />
+
         </LinearLayout>
-
-
-
 
 
         <LinearLayout
@@ -153,25 +119,24 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
-            <EditText
-                android:id="@+id/dateText"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:textColor="#000"
-                android:hint="@string/hintFechaFormulario"
-                android:textSize="20sp"
-                android:inputType="date" />
-            <TextView
-                android:id="@+id/errorFecha"
-                android:layout_marginLeft="16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:text="@string/errorFormularioFecha"/>
+                <EditText
+                    android:id="@+id/dateTextBusqueda"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textColor="#000"
+                    android:hint="@string/hintFechaFormulario"
+                    android:textSize="20sp"
+                    android:inputType="date" />
+                <TextView
+                    android:id="@+id/errorFechaBusqueda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="@string/errorFormularioFecha"/>
             </LinearLayout>
             <Button
-                android:id="@+id/botonDate"
+                android:id="@+id/botonDateBusqueda"
                 android:layout_marginTop="22dp"
                 android:layout_width="40dp"
                 android:layout_height="35dp"
@@ -202,64 +167,35 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
-            <EditText
-                android:id="@+id/telefonoText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="11"
-                android:hint="@string/hintTelefonoFormulario"
-                android:textColor="#000"
-                android:textSize="20sp"
-                android:inputType="phone" />
-            <TextView
-                android:id="@+id/errorTelefono"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:text="@string/errorFormularioTelefono"/>
-        </LinearLayout>
+                <EditText
+                    android:id="@+id/telefonoTextBusqueda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="11"
+                    android:hint="@string/hintTelefonoFormulario"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:inputType="phone" />
+                <TextView
+                    android:id="@+id/errorTelefonoBusqueda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="@string/errorFormularioTelefono"/>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/botonBuscar"
+            android:padding="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="18dp">
-            <ImageView
-                android:id="@+id/iconemail"
-                android:src="@drawable/iconemail"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_margin="16dp"
-                android:scaleType="centerInside"
-                tools:ignore="ContentDescription" />
-
-            <LinearLayout
-                android:id="@+id/layoutEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:orientation="vertical">
-            <EditText
-                android:id="@+id/emailText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/hintEmailFormulario"
-                android:textSize="20sp"
-                android:textColor="#000"
-                android:inputType="textEmailAddress" />
-            <TextView
-                android:id="@+id/errorEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:text="@string/errorFormularioEmail"/>
-        </LinearLayout>
-        </LinearLayout>
-
+            android:background="@drawable/borderboton"
+            android:textSize="30dp"
+            android:text="Buscar"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
-</ScrollView>
 
-
+</androidx.constraintlayout.widget.ConstraintLayout>

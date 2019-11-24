@@ -1,5 +1,6 @@
 package com.application.schoolmanagerapp.View;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import com.application.schoolmanagerapp.R;
 import com.bumptech.glide.Glide;
 
 public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.ViewHolder> {
+
+    String TAG = "SchoolManagerApp/AdaptadorPersona";
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
@@ -34,6 +37,7 @@ public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        Log.d(TAG, "Ejecutando onCreateViewHolder...");
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.item_lista, viewGroup, false);
         return new ViewHolder(v);
@@ -41,6 +45,7 @@ public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
+        Log.d(TAG, "Ejecutando onBindViewHolder...");
         Persona itemActual = Persona.personas.get(position);
 
         viewHolder.name_persona.setText(itemActual.getNombre());

@@ -1,9 +1,11 @@
 package com.application.schoolmanagerapp.View.ui.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,9 +22,13 @@ import com.application.schoolmanagerapp.View.ListaContactos;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
+    String TAG = "SchoolManagerApp/HomeFragment";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        Log.d(TAG, "Ejecutando onCreateView...");
+
+
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -30,7 +36,7 @@ public class HomeFragment extends Fragment {
 
         LinearLayoutManager layoutmanager = new LinearLayoutManager(ListaContactos.getContent());
         TextView textcontador = (TextView) root.findViewById(R.id.textcontador);
-        textcontador.setText((Persona.personas.size()+" resultados encontrados"));
+        textcontador.setText((Persona.personas.size()+" Resultados encontrados"));
 
         recyclerView.setLayoutManager(layoutmanager);
 

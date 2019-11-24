@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".View.SobreApp"
+            android:label="@string/title_activity_sobre_app"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".View.Busqueda"
+            android:label="@string/title_activity_busqueda"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".View.Formulario"
             android:label="@string/title_activity_formulario"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".View.ListaContactos"
             android:label="@string/title_activity_lista_contactos"

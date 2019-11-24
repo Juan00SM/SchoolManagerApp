@@ -1,5 +1,6 @@
 package com.application.schoolmanagerapp.View;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import com.application.schoolmanagerapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -25,38 +27,48 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.ImageView;
 
 public class ListaContactos extends AppCompatActivity implements ListadoInterface.View {
 
     String TAG = "SchoolManagerApp/ListaContactos";
     private AppBarConfiguration mAppBarConfiguration;
     static Context content;
-    static Intent formulario;
 
-    public void lanzarFormulario(){
-        startActivity(formulario);
+    public void llamarFormulario(){
+        startActivity(MyPresenterListado.getInstance().lanzarFormulario(content));
     }
-    public static void setFormulario(Intent form){
-        formulario = form;
+    public void llamarBusqueda(){
+        startActivity(MyPresenterListado.getInstance().lanzarBusqueda(content));
+    }
+    public void llamarSobreApp(){
+        startActivity(MyPresenterListado.getInstance().lanzarSobreApp(content));
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        content = this;
+        Log.d(TAG, "Entrando en onCreate...");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_contactos);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ImageView img = findViewById(R.id.search);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                llamarBusqueda();
+            }
+        });
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MyPresenterListado.getInstance().onClickAdd();
-                lanzarFormulario();
+                llamarFormulario();
             }
         });
         getSupportActionBar().closeOptionsMenu();
 
-
-        content = this;
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -71,20 +83,38 @@ public class ListaContactos extends AppCompatActivity implements ListadoInterfac
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Log.d(TAG, "Ejecutando onCreateOptionMenu...");
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.lista_contactos, menu);
+
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        boolean flag = false;
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.sobre_settings:
+                llamarSobreApp();
+                flag  = true;
+                break;
+        }
+        return flag;
+    }
+
     public static Context getContent(){
         return content;
     }
 
     @Override
     public boolean onSupportNavigateUp() {
+        Log.d(TAG, "Ejecutando onSupportNavigateUp...");
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();

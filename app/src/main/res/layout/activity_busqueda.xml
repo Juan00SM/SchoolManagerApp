@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.Formulario">
+    tools:context=".View.Busqueda">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -12,14 +12,13 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarFormulario"
+            android:id="@+id/toolbarBusqueda"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
-
             <ImageView
-                android:id="@+id/back"
+                android:id="@+id/backBusqueda"
                 android:layout_width="30dp"
                 android:layout_height="28dp"
                 android:scaleType="fitXY"
@@ -30,26 +29,11 @@
                 android:textSize="22sp"
                 android:textColor="#000"
                 android:layout_marginLeft="50dp"
-                android:text="@string/nuevoContacto" />
-            <ImageView
-                android:id="@+id/remove"
-                android:layout_width="26dp"
-                android:layout_height="24dp"
-                android:scaleType="fitXY"
-                android:layout_marginLeft="370dp"
-                android:src="@drawable/remove"/>
-            <ImageView
-                android:id="@+id/save"
-                android:layout_width="28dp"
-                android:layout_height="26dp"
-                android:scaleType="fitXY"
-                android:layout_marginLeft="8dp"
-                android:src="@drawable/save"/>
-
+                android:text="@string/busquedaText" />
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_formulario" />
+    <include layout="@layout/content_busqueda" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

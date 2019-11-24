@@ -1,25 +1,13 @@
 package com.application.schoolmanagerapp.Presenter;
 
-import android.content.Intent;
-
-import com.application.schoolmanagerapp.Interfaces.ListadoInterface;
-import com.application.schoolmanagerapp.View.Formulario;
-import com.application.schoolmanagerapp.View.ListaContactos;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MyPresenterFormulario implements ListadoInterface.PresenterFormulario {
-    private static MyPresenterFormulario presenter;
+public class MyPresenterBusqueda {
+    private static MyPresenterBusqueda presenter;
 
-    public void guardarNuevo(){
+    public void buscar(){
         //Limpiar formulario, recoger todos los datos y guardar el nuevo contacto o dejarlo vacio para terminar actividad
-    }
-    public void eliminarRegistro(){
-        //Limpiar formulario, recoger todos los datos y guardar el nuevo contacto o dejarlo vacio para terminar actividad
-    }
-    public void cancelarNuevo(){
-
     }
     public boolean validarFormulario(String campo, String valor){
         boolean isValid = false;
@@ -59,9 +47,9 @@ public class MyPresenterFormulario implements ListadoInterface.PresenterFormular
 
         return isValid;
     }
-    public static MyPresenterFormulario getInstance(){
+    public static MyPresenterBusqueda getInstance(){
         if (presenter == null){
-            presenter = new MyPresenterFormulario();
+            presenter = new MyPresenterBusqueda();
         }
         return presenter;
     }
