@@ -6,31 +6,77 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".View.SobreApp"
-    tools:showIn="@layout/activity_sobre_app">
+    tools:showIn="@layout/activity_sobre_app"
+    android:layout_gravity="center_horizontal">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-58dp">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="357dp"
-            android:layout_height="341dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@mipmap/schoolmanager" />
-        <TextView
-            android:id="@+id/errorFecha"
-            android:layout_marginLeft="16dp"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:text="@string/errorFormularioFecha"/>
+            android:orientation="vertical"
+            android:background="@color/fondoLogo"
+            tools:ignore="MissingConstraints">
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="357dp"
+                android:layout_height="341dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@mipmap/schoolmanager" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:text="@string/app_name"
+                android:textColor="@color/Negro"
+                android:textSize="36sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:paddingRight="120dp"
+                    android:text="@string/textDesarrollador"
+                    android:textColor="@color/Negro"
+                    android:textSize="28sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/textNombreDesarrollador"
+                    android:textColor="@color/Negro"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/labelCorreoElectronico"
+                    android:textColor="@color/Negro"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".View.Logo"
     tools:showIn="@layout/activity_logo"
-    android:background="#00BCD4">
+    android:background="@color/fondoLogo">
 
     <ImageView
         android:id="@+id/imageView"
