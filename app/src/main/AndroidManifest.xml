@@ -1,34 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.application.schoolmanagerapp">
+    package="com.juansm.schoolmanager">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
+        android:name=".TheApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".View.ui.contact.Fragment.FormStudent"></activity>
         <activity
-            android:name=".View.SobreApp"
-            android:label="@string/title_activity_sobre_app"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".View.MainNavigation"
+            android:label="@string/title_activity_main_navigation" />
         <activity
-            android:name=".View.Busqueda"
-            android:label="@string/title_activity_busqueda"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".View.Formulario"
-            android:label="@string/title_activity_formulario"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".View.ListaContactos"
-            android:label="@string/title_activity_lista_contactos"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".View.Logo"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".View.SplashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

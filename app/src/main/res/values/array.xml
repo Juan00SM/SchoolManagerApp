@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="listaopcionessexo">
-        <item>---Sexo---</item>
-        <item>Hombre</item>
-        <item>Mujer</item>
-        <item>Otro...</item>
+    <string-array name="header_timetable">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
     </string-array>
 </resources>

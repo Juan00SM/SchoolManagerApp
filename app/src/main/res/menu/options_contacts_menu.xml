@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_sort_contact"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/label_order_contact" />
+
+    <item
+        android:id="@+id/menu_search_contact"
+        android:icon="@drawable/ic_search"
+        android:title="@string/label_search_contact" />
+
+    <item
+        android:id="@+id/menu_help_contact"
+        android:icon="@drawable/ic_help"
+        android:title="@string/label_help_contact" />
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@drawable/ic_about"
+        android:title="@string/label_about" />
+</menu>

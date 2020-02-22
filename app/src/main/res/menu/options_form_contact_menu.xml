@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_save_contact"
+        android:icon="@drawable/ic_save"
+        android:title="@string/label_save_contact"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_remove_contact"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/label_delete_contact" />
+
+    <item
+        android:id="@+id/menu_help_contact"
+        android:icon="@drawable/ic_help"
+        android:title="@string/label_help_contact" />
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@drawable/ic_about"
+        android:title="@string/label_about" />
+</menu>

@@ -3,41 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/navigation_homeworks">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.application.schoolmanagerapp.View.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_homeworks"
+        android:name="com.juansm.schoolmanager.View.ui.homework.HomeworkFragment"
+        android:label="@string/title_homeworks"
+        tools:layout="@layout/fragment_homeworks" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.application.schoolmanagerapp.View.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/navigation_subjects"
+        android:name="com.juansm.schoolmanager.View.ui.subject.SubjectFragment"
+        android:label="@string/title_subject"
+        tools:layout="@layout/fragment_subjects" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.application.schoolmanagerapp.View.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
+        android:id="@+id/navigation_califications"
+        android:name="com.juansm.schoolmanager.View.ui.calification.CalificationFragment"
+        android:label="@string/title_califications"
+        tools:layout="@layout/fragment_califications" />
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.application.schoolmanagerapp.View.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
-
+        android:id="@+id/navigation_contacts"
+        android:name="com.juansm.schoolmanager.View.ui.contact.Fragment.ContactsFragment"
+        android:label="@string/title_contacts"
+        tools:layout="@layout/fragment_contacts" />
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.application.schoolmanagerapp.View.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.application.schoolmanagerapp.View.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        android:id="@+id/navigation_chat"
+        android:name="com.juansm.schoolmanager.View.ui.profile.ProfileFragment"
+        android:label="@string/title_chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>

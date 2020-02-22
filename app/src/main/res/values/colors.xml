@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="windowbackground">#302F2D</color>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="mycolor">#D4D4DA</color>
-    <color name="mycolor2">#F3F3F3</color>
-    <color name="fondoLogo">#00BCD4</color>
-    <color name="Negro">#000</color>
+    <color name="colorPrimaryDarktransparent">#6600574B</color>
+    <color name="colorsecondarytransparent">#77403D39</color>
+    <color name="colorsecondary">#403D39</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorOrange">#E05121</color>
+    <color name="colorDark">#242321</color>
+    <color name="colortextmenu">#D0D0D0</color>
+    <color name="colortexttab">#008577</color>
+    <color name="colorbackgroundtab">#252422</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="background_color_splash_screen">#00BCD4</color>
+
+    <color name="colorbackgroundcardview">#D0D0D0</color>
 </resources>
