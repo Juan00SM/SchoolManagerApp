@@ -30,35 +30,37 @@ public class StudentDAO {
     public Long insertStudent(Student student) {
         Long id = (long)-1;
         if (student != null) {
-            DataBaseConnection dbConn = DataBaseConnection.getInstance();
-            SQLiteDatabase db = dbConn.getWritableDatabase();
-            ContentValues values = new ContentValues();
+            if (student.isValid()){
+                DataBaseConnection dbConn = DataBaseConnection.getInstance();
+                SQLiteDatabase db = dbConn.getWritableDatabase();
+                ContentValues values = new ContentValues();
 
-            if (db != null) {
-                values.put("name", student.getName());
-                values.put("lastName", student.getLastName());
-                values.put("phone", student.getPhone());
-                values.put("email", student.getEmail());
-                values.put("nameFather", student.getNameFather());
-                values.put("nameMother", student.getNameMother());
-                values.put("fatherPhone", student.getFatherPhone());
-                values.put("motherPhone", student.getMotherPhone());
-                values.put("birthDate", student.getBirthDate());
-                values.put("idCourse", student.getIdCourse());
-                values.put("address", student.getAddress());
-                values.put("idGender", student.getIdGender());
-                values.put("img", student.getImg());
+                if (db != null) {
+                    values.put("name", student.getName());
+                    values.put("lastName", student.getLastName());
+                    values.put("phone", student.getPhone());
+                    values.put("email", student.getEmail());
+                    values.put("nameFather", student.getNameFather());
+                    values.put("nameMother", student.getNameMother());
+                    values.put("fatherPhone", student.getFatherPhone());
+                    values.put("motherPhone", student.getMotherPhone());
+                    values.put("birthDate", student.getBirthDate());
+                    values.put("idCourse", student.getIdCourse());
+                    values.put("address", student.getAddress());
+                    values.put("idGender", student.getIdGender());
+                    values.put("img", student.getImg());
 
 
-                db.beginTransaction();
-                try {
-                    id = db.insertOrThrow(nameTable, null, values);
-                    db.setTransactionSuccessful();
-                } catch (Exception e) {
-                    Log.d(TAG, "Error while trying to add student to database");
-                } finally {
-                    db.endTransaction();
-                    db.close();
+                    db.beginTransaction();
+                    try {
+                        id = db.insertOrThrow(nameTable, null, values);
+                        db.setTransactionSuccessful();
+                    } catch (Exception e) {
+                        Log.d(TAG, "Error while trying to add student to database");
+                    } finally {
+                        db.endTransaction();
+                        db.close();
+                    }
                 }
             }
         }

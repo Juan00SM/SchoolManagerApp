@@ -34,8 +34,12 @@ public class Person {
         return img;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public boolean setImg(String img) {
+        if (img!=null&&!img.equals("")){
+            this.img = img;
+            return true;
+        }
+        return false;
     }
 
     public Long getId() {
@@ -167,9 +171,14 @@ public class Person {
 
     public boolean setAddress(String address) {
         if (address!=null){
-
+            Pattern pat = Pattern.compile("^[A-Za-z(),.\\º\\d\\-\\/\\s]+$");
+            Matcher mat = pat.matcher(address);
+            if (mat.matches()) {
                 this.address = address;
                 return true;
+            }else {
+                return false;
+            }
         }
         return false;
     }
