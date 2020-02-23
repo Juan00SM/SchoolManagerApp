@@ -145,7 +145,7 @@ public class StudentFragment extends Fragment {
                         public void run() {
                             beAbleSearch = true;
                         }
-                    }, 350);
+                    }, 200);
 
                 }
                 return false;

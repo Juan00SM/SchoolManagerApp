@@ -1,5 +1,6 @@
 package com.juansm.schoolmanager.Model.Entities;
 
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -188,5 +189,26 @@ public class Person {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return Objects.equals(getId(), person.getId()) &&
+                getName().equals(person.getName()) &&
+                Objects.equals(getLastName(), person.getLastName()) &&
+                Objects.equals(getIdGender(), person.getIdGender()) &&
+                Objects.equals(getBirthDate(), person.getBirthDate()) &&
+                Objects.equals(getEmail(), person.getEmail()) &&
+                getPhone().equals(person.getPhone()) &&
+                Objects.equals(getAddress(), person.getAddress()) &&
+                Objects.equals(getImg(), person.getImg());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getLastName(), getIdGender(), getBirthDate(), getEmail(), getPhone(), getAddress(), getImg());
     }
 }

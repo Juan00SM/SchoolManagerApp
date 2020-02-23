@@ -2,7 +2,9 @@ package com.juansm.schoolmanager.Model.Entities;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,7 +47,7 @@ public class Student extends Person implements Parcelable {
 
     public boolean setIdCourse(Long idCourse) {
         if (idCourse!=null){
-            if (idCourse>-1){
+            if (idCourse>0){
                 this.idCourse = idCourse;
                 return true;
             }
@@ -128,6 +130,47 @@ public class Student extends Person implements Parcelable {
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+        Student student = (Student) o;
+        if (super.equals(o)){
+            return Objects.equals(getIdCourse(), student.getIdCourse()) &&
+                    Objects.equals(getNameFather(), student.getNameFather()) &&
+                    Objects.equals(getFatherPhone(), student.getFatherPhone()) &&
+                    Objects.equals(getNameMother(), student.getNameMother()) &&
+                    Objects.equals(getMotherPhone(), student.getMotherPhone());
+        }else{
+            return false;
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "idCourse=" + idCourse +
+                ", nameFather='" + nameFather + '\'' +
+                ", fatherPhone='" + fatherPhone + '\'' +
+                ", nameMother='" + nameMother + '\'' +
+                ", motherPhone='" + motherPhone + '\'' +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", idGender=" + idGender +
+                ", birthDate='" + birthDate + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", img='" + img + '\'' +
+                '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdCourse(), getNameFather(), getFatherPhone(), getNameMother(), getMotherPhone());
+    }
 
     @Override
     public int describeContents() {

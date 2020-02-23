@@ -70,38 +70,41 @@ public class StudentDAO {
     public boolean modifyStudent(Student student) {
         boolean done = false;
         if (student != null) {
-            DataBaseConnection dbConn = DataBaseConnection.getInstance();
-            SQLiteDatabase db = dbConn.getWritableDatabase();
-            ContentValues values = new ContentValues();
+            if (student.getId()!=null){
+                DataBaseConnection dbConn = DataBaseConnection.getInstance();
+                SQLiteDatabase db = dbConn.getWritableDatabase();
+                ContentValues values = new ContentValues();
 
-            if (db != null) {
-                values.put("name", student.getName());
-                values.put("lastName", student.getLastName());
-                values.put("phone", student.getPhone());
-                values.put("email", student.getEmail());
-                values.put("nameFather", student.getNameFather());
-                values.put("nameMother", student.getNameMother());
-                values.put("fatherPhone", student.getFatherPhone());
-                values.put("motherPhone", student.getMotherPhone());
-                values.put("birthDate", student.getBirthDate());
-                values.put("idCourse", student.getIdCourse());
-                values.put("address", student.getAddress());
-                values.put("idGender", student.getIdGender());
-                values.put("img", student.getImg());
+                if (db != null) {
+                    values.put("name", student.getName());
+                    values.put("lastName", student.getLastName());
+                    values.put("phone", student.getPhone());
+                    values.put("email", student.getEmail());
+                    values.put("nameFather", student.getNameFather());
+                    values.put("nameMother", student.getNameMother());
+                    values.put("fatherPhone", student.getFatherPhone());
+                    values.put("motherPhone", student.getMotherPhone());
+                    values.put("birthDate", student.getBirthDate());
+                    values.put("idCourse", student.getIdCourse());
+                    values.put("address", student.getAddress());
+                    values.put("idGender", student.getIdGender());
+                    values.put("img", student.getImg());
 
 
-                db.beginTransaction();
-                try {
-                    String[] args = new String[]{String.valueOf(student.getId())};
-                    db.update(nameTable, values, "id=?", args);
-                    db.setTransactionSuccessful();
-                    done = true;
-                } catch (Exception e) {
-                    Log.d(TAG, "Error while trying to modify student to database");
-                    done = false;
-                } finally {
-                    db.endTransaction();
-                    db.close();
+                    db.beginTransaction();
+                    try {
+                        Log.d(TAG, "UPDATEEEE");
+                        String[] args = new String[]{String.valueOf(student.getId())};
+                        db.update(nameTable, values, "id=?", args);
+                        db.setTransactionSuccessful();
+                        done = true;
+                    } catch (Exception e) {
+                        Log.d(TAG, "Error while trying to modify student to database");
+                        done = false;
+                    } finally {
+                        db.endTransaction();
+                        db.close();
+                    }
                 }
             }
         }
@@ -119,9 +122,11 @@ public class StudentDAO {
                 db.beginTransaction();
                 try {
                     String[] args = new String[]{String.valueOf(id)};
-                    db.delete(nameTable, "id=?", args);
+                    int count = db.delete(nameTable, "id=?", args);
                     db.setTransactionSuccessful();
-                    done = true;
+                    if (count>0){
+                        done = true;
+                    }
                 } catch (Exception e) {
                     Log.d(TAG, "Error while trying to remove student to database");
                     done = false;

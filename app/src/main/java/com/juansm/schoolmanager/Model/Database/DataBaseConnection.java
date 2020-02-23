@@ -1,6 +1,7 @@
 package com.juansm.schoolmanager.Model.Database;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -16,20 +17,28 @@ import java.util.List;
 public class DataBaseConnection extends SQLiteOpenHelper {
 
     private static DataBaseConnection dataBaseConnection;
+    private static Context context;
 
-    private final static String DATABASE_NAME = "SchoolManager";
-    private final static Integer DATABASE_VERSION = 1;
+    public final static String DATABASE_NAME = "SchoolManager";
+    public final static Integer DATABASE_VERSION = 1;
 
-    private DataBaseConnection() {
-        super(TheApplication.getContext(), DATABASE_NAME, null, DATABASE_VERSION);
-
+    private DataBaseConnection(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     public static DataBaseConnection getInstance() {
         if (dataBaseConnection == null) {
-            dataBaseConnection = new DataBaseConnection();
+            if (context!=null){
+                dataBaseConnection = new DataBaseConnection(context);
+            }else{
+                dataBaseConnection = new DataBaseConnection(TheApplication.getContext());
+            }
         }
         return dataBaseConnection;
+    }
+
+    public static void setContext(Context context) {
+        DataBaseConnection.context = context;
     }
 
     @Override
