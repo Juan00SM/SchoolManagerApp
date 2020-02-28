@@ -38,6 +38,7 @@ import com.juansm.schoolmanager.Model.Entities.Student;
 import com.juansm.schoolmanager.Presenter.GenderPresenter;
 import com.juansm.schoolmanager.Presenter.StudentPresenter;
 import com.juansm.schoolmanager.R;
+import com.juansm.schoolmanager.View.Help;
 import com.juansm.schoolmanager.View.utils.ChooseDatePickerDialog;
 import com.juansm.schoolmanager.View.utils.ConfirmationAlertDialog;
 
@@ -71,6 +72,7 @@ public class FormStudent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_student);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(getString(R.string.title_activity_form_student));
 
         this.confirmationAlertDialog = new ConfirmationAlertDialog();
         this.chooseDatePickerDialog = new ChooseDatePickerDialog();
@@ -561,6 +563,9 @@ public class FormStudent extends AppCompatActivity {
                 }
             case R.id.menu_help_contact:
                 Log.d(TAG, "help");
+                Intent i = new Intent(FormStudent.this, Help.class);
+                i.putExtra(Help.HELP_KEY, Help.URL_HELP_FORM_CONTACT);
+                startActivity(i);
                 return true;
             case R.id.menu_about:
                 Log.d(TAG, "about");

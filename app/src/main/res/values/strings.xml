@@ -65,5 +65,9 @@
     <string name="title_alert_remove_contact">Eliminar Contacto</string>
     <string name="message_alert_remove_contact">¿Estás seguro, se borrará el contacto?</string>
     <string name="hint_search_student">Buscar por Nombre o Tlf</string>
+    <string name="title_activity_form_student">Estudiante</string>
+    <string name="title_activity_help">Ayuda</string>
+    <string name="text_textview_help_disconnect">Ha habido un problema con la conexión a internet, por lo tanto no es posible cargar la pagina de ayuda. Vuelva a intentarlo en un momento...</string>
+    <string name="text_button_retry">Reintentar conectar...</string>
 
 </resources>

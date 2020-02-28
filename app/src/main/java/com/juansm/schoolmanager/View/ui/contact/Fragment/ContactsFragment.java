@@ -3,6 +3,7 @@ package com.juansm.schoolmanager.View.ui.contact.Fragment;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ import android.view.ViewGroup;
 
 import com.google.android.material.tabs.TabLayout;
 import com.juansm.schoolmanager.R;
+import com.juansm.schoolmanager.View.Help;
 import com.juansm.schoolmanager.View.ui.contact.ContactsViewModel;
 import com.juansm.schoolmanager.View.ui.contact.Adapter.TabsAdapterContact;
 
@@ -82,6 +84,9 @@ public class ContactsFragment extends Fragment {
         switch (item.getItemId()){
             case R.id.menu_help_contact:
                 Log.d(TAG, "help");
+                Intent i = new Intent(this.getContext(), Help.class);
+                i.putExtra(Help.HELP_KEY, Help.URL_HELP_LIST_AND_SEARCH_CONTACT);
+                startActivity(i);
                 return true;
             case R.id.menu_about:
                 Log.d(TAG, "about");
