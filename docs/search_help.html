@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>SchoolManager - Búsqueda</title>
+</head>
+
+<body class="bg-secondary">
+  <nav class="navbar navbar-dark bg-dark justify-content-around">
+    <!-- Navbar content -->
+    <h1 class="text-white">SchoolManager</h1>
+
+    <h2 class="text-info" style="text-align: center;">Instrucciones Búsqueda</h2>
+  </nav>
+  <div class="container">
+
+    <!-- Content here -->
+    <div class="row justify-content-around">
+
+      <div class="col" style="margin-top: 15px;">
+        <div class="card mx-auto text-white bg-dark border-light mb-3">
+          <div class="card-body">
+            <h5 class="card-title mb-2">Búsqueda de Contactos</h5>
+            <p class="card-text text-justify mb-4">En la ventana de contactos disponemos de un menú de opciones, que se
+              abre al pulsar los tres puntitos de la cabecera. Al desplegarse este menú, observamos que disponemos de
+              cuatro opciones, de las cuales una es Buscar Contacto. Si le damos a esta opción, se desplegará un pequeño
+              formulario de búsqueda desde el cuál filtraremos la lista disponible de contactos segun nuestros
+              requisitos.
+              Las opciones de búsqueda por las que podremos filtrar son Nombre, Teléfono, Fecha de Nacimiento y/o Género
+              del contacto. Tanto la opción de Nombre como la de Teléfono se introducen en el mismo campo de búsqueda y
+              por lo tanto de entre estos dos solo se busca por uno de ellos al mismo tiempo.
+              En caso de querer resetear la busqueda tenemos la opcion de dejar todos los campos en blanco(o sin
+              seleccionar) y buscara todos los contactos, o podemos aprovechar la opción que se encuentra en la esquina
+              superior derecha mediante la que se resetea automaticamente toda la búsqueda.
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted">Nombre</h6>
+            <p class="card-text text-justify">Para realizar una búsqueda por nombre de contacto habrá que introducir en
+              el campo de búsqueda indicado para ello un nombre de persona válido o parte de este nombre, es decir, no
+              es necesario introducir el nombre completo de la persona que se está buscando puesto que la aplicación
+              realizara la búsqueda de todos aquellos contactos que contengan en su nombre la búsqueda realizada.
+              Esta búsqueda se ejecuta cada unos milisegundos después de que el valor introducido cambie.</p>
+            <h6 class="card-subtitle mb-2 text-muted">Teléfono</h6>
+            <p class="card-text text-justify">El teléfono, como ya se ha comentado al principio, se introduce en el
+              mismo campo de busqueda que el nombre de contacto y, por lo tanto, dispone de toda la logica que cuando se
+              busca por nombre, es decir, no es necesario introducir el número de teléfono entero y la busqueda se
+              realiza automaticamente cada unos milisegundos al cambiar el valor introducido.</p>
+            <h6 class="card-subtitle mb-2 text-muted">Fecha de Nacimiento</h6>
+            <p class="card-text text-justify">Para la búsqueda por teléfono disponemos de un campo especial en el que el
+              teclado sera de tipo númerico y con barra para introducir una fecha con formato válido. Además disponemos
+              de la opción de pulsar en el icono de calendario para abrir una ventana tipo calendario y poder
+              seleccionar en el la fecha que se desee. Decir que en este caso, la fecha introducida debe ser completa
+              puesto que la busqueda automatica no se realizara si la fecha no es valida, y para ello debe estar
+              completa(dia/mes/año).</p>
+            <h6 class="card-subtitle mb-2 text-muted">Género</h6>
+            <p class="card-text text-justify">Por último tenemos la opción de buscar mediante el género del contacto.
+              Para introducir el género por el que se quiere buscar se dispone de un campo de tipo selección en el que
+              se recogen todos los géneros disponibles en la aplicación en ese momento. Al igual que los campos
+              anteriores, este también ees automático, por lo tanto al seleccionar unos de los géneros disponibles la
+              aplicación realizara la búsqueda y se mostrara la lista actualizada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
