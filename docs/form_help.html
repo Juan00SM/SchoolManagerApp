@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <title>SchoolManager - Formulario</title>
+  <title>SchoolManager-Formulario</title>
 </head>
 
 <body class="bg-secondary">
@@ -26,67 +26,76 @@
     <div class="row justify-content-around">
       <div class="col" style="margin-top: 15px;">
         <div class="card mx-auto text-white bg-dark border-light mb-3">
-          <div class="card-body">
-            <h3 class="card-title mb-2">Formulario de Contacto</h3>
-            <p class="card-text text-justify mb-4">En esta ventana se encuentra el formulario mediante el cual
-              realizaremos las acciones de añadir un nuevo contacto, editar un contacto existente o eliminarlo. Se
-              compone de una serie de campos, que posteriormente serán comentados uno por uno, que en conjunto
-              corresponden a los datos que se almacenan de cada contacto. En la cabecera tenemos un menu desplegable al
-              pulsar los tres puntitos y en el que se encuentran las opciones de eliminar, ayuda y Sobre la App. Todas
-              las funciones disponibles desde la ventana formulario son comentadas a continuación. </p>
-            <h5 class="card-title">Funciones del Formulario</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Insertar Nuevo Contacto</h6>
-            <p class="card-text text-justify mb-4">Para realizar la acción de insertar un nuevo contacto debemos rellenar,
-              como mínimo, los campos obligatorios y de forma válida, puesto que si falta algún campo obligatorio o de
-              los campos introducidos hay alguno invalido saltará un mensaje de error debajo del campo erroneo.
-              Realizado lo anterior, ya se podrá insertar, y por lo tanto almacenar, el nuevo contacto.
-              Para ello solo hay que pulsar el botón de guardar colocado en la parte
-              superior-derecha de la cabecera y confirmar la acción.</p>
-            <h6 class="card-subtitle mb-2 text-muted">Modificar Contacto</h6>
-            <p class="card-text text-justify mb-4">De la misma manera que el Insertar Nuevo Contacto, los campos modificados
-              del contacto cargado en el formulario deben ser válidos e incluir los obligatorios. Una vez modificado,
-              para guardar los cambios solo hay que puldar el botón de guardado de la parte superior-derecha de la
-              cabecera y confirmar la acción.</p>
-            <h6 class="card-subtitle mb-2 text-muted">Eliminar Contacto</h6>
-            <p class="card-text text-justify mb-4">Para eliminar un contacto existente, una vez has entrado en el formulario
-              a travez de un contacto y se ha cargado, desplegamos el menu superior pulsando los tres puntitos de la
-              cabecera y pulsamos la opción de eliminar. Para que la accion se lleve a cabo habrá que confirmar la
-              acción.</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Imagen de perfil</h6>
-              <p class="card-text text-justify mb-4">Para introducir una imagen solo habrá que pulsar en el campo
-                Imagen-Perfil. Al pulsar, si no se dispone de los permisos oportunos, se preguntara para adquirir dichos
-                permisos y, si se aceptan, nos abrirá la galería del dispositivo para elegir la imagen deseada. Una vez
-                elegida y seleccionada, volvera al formulario con la imagen cargada en el campo Imagen-Perfil. En caso
-                de no aceptar los permisos no se podrá cargar una imagen.</p>
-              <h6 class="card-subtitle mb-2 text-muted">Nombre, Apellidos, Nombre del Padre, Nombre de la Madre</h6>
-              <p class="card-text text-justify mb-4">Estos campos del formulario son de tipo texto, es decir, se podra
-                escribir cualquier caracter alfanumérico, pero estan restringidos a introducir un nombre de persona
-                válido. Estos campos admiten los caracteres del abecedario en mayúscula o minúscula, vocales acentuadas,
-                comilla simple y espaciado. </p>
-              <h6 class="card-subtitle mb-2 text-muted">Teléfono, Teléfono del Padre, Teléfono de la Madre</h6>
-              <p class="card-text text-justify mb-4">Estos campos del formulario son de tipo numérico, es decir, se podra
-                escribir numeros del cero al nueve, pero estan restringidos a introducir exactamente una longitud de
-                nueve caracteres numéricos que comienze por 6, 7 o 9.</p>
-              <h6 class="card-subtitle mb-2 text-muted">Correo Electrónico</h6>
-              <p class="card-text text-justify mb-4">Este campo del formulario es de tipo email, restringido solo a una serie
-                de caracteres especiales permitidos en los email y con una estructura de
-                caracteres@caracteres.caracteres</p>
-              <h6 class="card-subtitle mb-2 text-muted">Dirección</h6>
-              <p class="card-text text-justify mb-4">Este campo del formulario es de tipo texto, por lo que se puede
-                introducir cualquier caracter, pero esta restringido a introducir una direccion postal válida. Para ello
-                los caracteres permitidos son el abecedario(mayúscula y minúscula), números, coma(,), punto(.),
-                guión(-), barra(/) y símbolo de grado(º).</p>
-              <h6 class="card-subtitle mb-2 text-muted">Fecha de Nacimiento</h6>
-              <p class="card-text text-justify mb-4">Este campo del formulario es de tipo fecha, por lo que solo se puede
-                introducir números y el símbolo barra(/). El formato válido de fecha a introducir es dd/mm/aaaa.
-                Este campo, si pulsamos en el icono de calendario, dispone de una ventana en la que se muestra un
-                calendario y se puede seleccionar una fecha, que al aceptarla rellenara automaticamente el campo.</p>
-              <h6 class="card-subtitle mb-2 text-muted">Género</h6>
-              <p class="card-text text-justify mb-4">Este campo del formulario es de tipo selectivo, es decir, dispone de una
-                serie de opciones de las cuales podemos elegir una o ninguna. Para ello pulsamos en el campo y se
-                deplegará un menu con varias opciones de las que elegir. A su vez, si no se encuentra el valor deseado,
-                dispone de un boton para añadir un nuevo género, que sera seleccionado automáticamente.</p>
-          </div>
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="img/fragment_form.png" class="card-img" alt="image-list">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h3 class="card-title mb-2">Formulario de Contacto</h3>
+                      <p class="card-text text-justify mb-4">En esta ventana se encuentra el formulario mediante el cual
+                        realizaremos las acciones de añadir un nuevo contacto, editar un contacto existente o eliminarlo. Se
+                        compone de una serie de campos, que posteriormente serán comentados uno por uno, que en conjunto
+                        corresponden a los datos que se almacenan de cada contacto. En la cabecera tenemos un menu desplegable al
+                        pulsar los tres puntitos y en el que se encuentran las opciones de eliminar, ayuda y Sobre la App. Todas
+                        las funciones disponibles desde la ventana formulario son comentadas a continuación. </p>
+                      <h5 class="card-title">Funciones del Formulario</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Insertar Nuevo Contacto</h6>
+                      <p class="card-text text-justify mb-4">Para realizar la acción de insertar un nuevo contacto debemos rellenar,
+                        como mínimo, los campos obligatorios y de forma válida, puesto que si falta algún campo obligatorio o de
+                        los campos introducidos hay alguno invalido saltará un mensaje de error debajo del campo erroneo.
+                        Realizado lo anterior, ya se podrá insertar, y por lo tanto almacenar, el nuevo contacto.
+                        Para ello solo hay que pulsar el botón de guardar colocado en la parte
+                        superior-derecha de la cabecera y confirmar la acción.</p>
+                      <h6 class="card-subtitle mb-2 text-muted">Modificar Contacto</h6>
+                      <p class="card-text text-justify mb-4">De la misma manera que el Insertar Nuevo Contacto, los campos modificados
+                        del contacto cargado en el formulario deben ser válidos e incluir los obligatorios. Una vez modificado,
+                        para guardar los cambios solo hay que puldar el botón de guardado de la parte superior-derecha de la
+                        cabecera y confirmar la acción.</p>
+                      <h6 class="card-subtitle mb-2 text-muted">Eliminar Contacto</h6>
+                      <p class="card-text text-justify mb-4">Para eliminar un contacto existente, una vez has entrado en el formulario
+                        a travez de un contacto y se ha cargado, desplegamos el menu superior pulsando los tres puntitos de la
+                        cabecera y pulsamos la opción de eliminar. Para que la accion se lleve a cabo habrá que confirmar la
+                        acción.</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Imagen de perfil</h6>
+                        <p class="card-text text-justify mb-4">Para introducir una imagen solo habrá que pulsar en el campo
+                          Imagen-Perfil. Al pulsar, si no se dispone de los permisos oportunos, se preguntara para adquirir dichos
+                          permisos y, si se aceptan, nos abrirá la galería del dispositivo para elegir la imagen deseada. Una vez
+                          elegida y seleccionada, volvera al formulario con la imagen cargada en el campo Imagen-Perfil. En caso
+                          de no aceptar los permisos no se podrá cargar una imagen.</p>
+                        <h6 class="card-subtitle mb-2 text-muted">Nombre, Apellidos, Nombre del Padre, Nombre de la Madre</h6>
+                        <p class="card-text text-justify mb-4">Estos campos del formulario son de tipo texto, es decir, se podra
+                          escribir cualquier caracter alfanumérico, pero estan restringidos a introducir un nombre de persona
+                          válido. Estos campos admiten los caracteres del abecedario en mayúscula o minúscula, vocales acentuadas,
+                          comilla simple y espaciado. </p>
+                        <h6 class="card-subtitle mb-2 text-muted">Teléfono, Teléfono del Padre, Teléfono de la Madre</h6>
+                        <p class="card-text text-justify mb-4">Estos campos del formulario son de tipo numérico, es decir, se podra
+                          escribir numeros del cero al nueve, pero estan restringidos a introducir exactamente una longitud de
+                          nueve caracteres numéricos que comienze por 6, 7 o 9.</p>
+                        <h6 class="card-subtitle mb-2 text-muted">Correo Electrónico</h6>
+                        <p class="card-text text-justify mb-4">Este campo del formulario es de tipo email, restringido solo a una serie
+                          de caracteres especiales permitidos en los email y con una estructura de
+                          caracteres@caracteres.caracteres</p>
+                        <h6 class="card-subtitle mb-2 text-muted">Dirección</h6>
+                        <p class="card-text text-justify mb-4">Este campo del formulario es de tipo texto, por lo que se puede
+                          introducir cualquier caracter, pero esta restringido a introducir una direccion postal válida. Para ello
+                          los caracteres permitidos son el abecedario(mayúscula y minúscula), números, coma(,), punto(.),
+                          guión(-), barra(/) y símbolo de grado(º).</p>
+                        <h6 class="card-subtitle mb-2 text-muted">Fecha de Nacimiento</h6>
+                        <p class="card-text text-justify mb-4">Este campo del formulario es de tipo fecha, por lo que solo se puede
+                          introducir números y el símbolo barra(/). El formato válido de fecha a introducir es dd/mm/aaaa.
+                          Este campo, si pulsamos en el icono de calendario, dispone de una ventana en la que se muestra un
+                          calendario y se puede seleccionar una fecha, que al aceptarla rellenara automaticamente el campo.</p>
+                        <h6 class="card-subtitle mb-2 text-muted">Género</h6>
+                        <p class="card-text text-justify mb-4">Este campo del formulario es de tipo selectivo, es decir, dispone de una
+                          serie de opciones de las cuales podemos elegir una o ninguna. Para ello pulsamos en el campo y se
+                          deplegará un menu con varias opciones de las que elegir. A su vez, si no se encuentra el valor deseado,
+                          dispone de un boton para añadir un nuevo género, que sera seleccionado automáticamente.</p>
+                    </div>
+                  </div>
+            </div>
+
+            
         </div>
       </div>
     </div>
