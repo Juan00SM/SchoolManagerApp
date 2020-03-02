@@ -15,6 +15,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.juansm.schoolmanager.R;
 
@@ -24,9 +25,9 @@ import java.net.UnknownHostException;
 public class Help extends AppCompatActivity {
 
     public static final String HELP_KEY = "WEB_HELP";
-    private static final String URL_HELP_INDEX = "https://www.google.com/";
-    public static final String URL_HELP_FORM_CONTACT = "https://www.youtube.com/?gl=ES&tab=r11";
-    public static final String URL_HELP_LIST_AND_SEARCH_CONTACT = "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox";
+    private static final String URL_HELP_INDEX = "https://juan00sm.github.io/SchoolManagerApp/";
+    public static final String URL_HELP_FORM_CONTACT = "https://juan00sm.github.io/SchoolManagerApp/form_help.html";
+    public static final String URL_HELP_LIST_AND_SEARCH_CONTACT = "https://juan00sm.github.io/SchoolManagerApp/list_search.html";
 
 
     String TAG = "SchoolManager/Help";
@@ -86,6 +87,7 @@ public class Help extends AppCompatActivity {
                 Log.d(TAG, "Conexion Incorrecta");
                 this.webview_help.setVisibility(LinearLayout.GONE);
                 this.linearLayout_disconnected.setVisibility(LinearLayout.VISIBLE);
+                Toast.makeText(Help.this, "Error al cargar la página, no dispone de conexión a internet", Toast.LENGTH_LONG).show();
             }
         }
 
