@@ -71,7 +71,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/Juan00SM/SchoolManagerApp/tags) y los [releases disponibles](https://github.com/Juan00SM/SchoolManagerApp/releases).
+Usamos [Github](https://github.com/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/Juan00SM/SchoolManagerApp/tags) y los [releases disponibles](https://github.com/Juan00SM/SchoolManagerApp/releases).
 
 ## Autores ✒️
 
